@@ -13,42 +13,57 @@ class AppController extends AbstractController
      */
     public function index(): Response
     {
-        $post_list = [
+        $offer_list = [
             [
                 "title" => "Post 1",
-                "image" => "https://via.placeholder.com/300"
+                "image" => "https://via.placeholder.com/300",
+                "city" => "Bordeaux",
+                "contract" => "CDD",
+                "duration" => "12 month"
             ],
             [
                 "title" => "Post 2",
-                "image" => "https://via.placeholder.com/300"
+                "image" => "https://via.placeholder.com/300",
+                "city" => "Bordeaux",
+                "contract" => "CDD",
+                "duration" => "12 month"
             ],
             [
                 "title" => "Post 3",
-                "image" => "https://via.placeholder.com/300"
+                "image" => "https://via.placeholder.com/300",
+                "city" => "Bordeaux",
+                "contract" => "CDD",
+                "duration" => "12 month"
             ],
             [
                 "title" => "Post 4",
-                "image" => "https://via.placeholder.com/300"
+                "image" => "https://via.placeholder.com/300",
+                "city" => "Bordeaux",
+                "contract" => "CDD",
+                "duration" => "12 month"
             ]
         ];
 
         return $this->render('app/index.html.twig', [
-            "post_list" => $post_list
+            "offer_list" => $offer_list
         ]);
     }
 
     /**
-     * @Route("/post", name="post")
+     * @Route("/offer", name="offer")
      */
     public function show()
     {
-        $post =  [
+        $offer =  [
             "title" => "Post 4",
-            "image" => "https://via.placeholder.com/300"
+            "image" => "https://via.placeholder.com/300",
+            "city" => "Bordeaux",
+            "contract" => "CDD",
+            "duration" => "12 month"
         ];
 
-        return $this->render('app/show.html.twig', [
-            "post" => $post
+        return $this->render('app/offer.html.twig', [
+            "offer" => $offer
         ]);
     }
 }
